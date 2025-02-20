@@ -12,7 +12,6 @@ Aprender a evadir la detección de root en una aplicación que usa **RootBeer** 
 - **JADX-GUI** para descompilar el APK.
 - **Frida** instalado en el sistema y en el dispositivo.
 - **Un dispositivo rooteado o un emulador** con Frida server en ejecución.
-- 
 ---
 
 ## 1️⃣ Descompilar el APK con JADX-GUI
