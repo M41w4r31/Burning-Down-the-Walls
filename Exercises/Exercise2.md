@@ -64,6 +64,3 @@ Aprender a evadir la detección de root en una aplicación que usa **RootBeer** 
 - **Desarrolla un script que bypassee todos los métodos identificados en el análisis.**
 - Experimenta con más verificaciones de root en otras aplicaciones.
 - Explora cómo Frida puede modificar otros aspectos de una app.
-
-¡Felicidades! 🎉 Ahora tienes una herramienta poderosa para evitar la detección de **RootBeer** en Android.
-
