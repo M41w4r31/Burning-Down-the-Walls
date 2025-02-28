@@ -1,10 +1,11 @@
 📖 Reverse Ingeniería de Aplicación iOS con Ghidra
+
 🔥 Objetivo
 Realizar un análisis de ingeniería inversa de una aplicación iOS utilizando **Ghidra**, descompilando y analizando la estructura interna de la aplicación para comprender su funcionamiento y lógica.
 
 🛠 Requisitos
 * **IPA de la aplicación** descargado
-* **Ghidra** instalado 
+* **Ghidra** instalado
 * **Java JDK**
 
 1️⃣ Preparación del IPA
@@ -27,7 +28,6 @@ Realizar un análisis de ingeniería inversa de una aplicación iOS utilizando *
 1. **Cargar el binario en Ghidra**
    * Abrir Ghidra CodeBrowser
    * Importar binario ejecutable
-   
 
 2. **Análisis inicial**
    * Ejecutar análisis automático de Ghidra
@@ -43,37 +43,36 @@ Realizar un análisis de ingeniería inversa de una aplicación iOS utilizando *
    * **Depuración de funciones sensibles**
      ```cpp
      // Ejemplo de función de verificación
-     bool _$s9No_Escape12isJailbrokenSbyF(void) {
+     bool *$s9No*Escape12isJailbrokenSbyF(void) {
      }
      ```
      Este método es el que contiene el valor booleano que estamos buscando. Si retorna Falso lograremos el Bypass.
 
 4. **Genéración del script de Frida**
    ```js
-     var myMethod = Module.findExportByName(null, "$s9No_Escape12isJailbrokenSbyF");
+   var myMethod = Module.findExportByName(null, "$s9No_Escape12isJailbrokenSbyF");
 
-if (myMethod) {
-    Interceptor.attach(myMethod, {
-        onEnter: function (args) {
-            console.log("Hooked Swift method!");
-        },
-        onLeave: function (retval) {
-            console.log("Original return value:", retval.toInt32()); 
-            retval.replace(0);
-            console.log("Modified return value", retval.toInt32()); 
-        }
-    });
-} else {
-    console.log("Hooking Swift method failed!");
-}
-     ```
+   if (myMethod) {
+     Interceptor.attach(myMethod, {
+       onEnter: function (args) {
+         console.log("Hooked Swift method!");
+       },
+       onLeave: function (retval) {
+         console.log("Original return value:", retval.toInt32());
+         retval.replace(0);
+         console.log("Modified return value", retval.toInt32());
+       }
+     });
+   } else {
+     console.log("Hooking Swift method failed!");
+   }
+   ```
 
 3️⃣ Ejecución del Código
-1.  ```sh
-    frida -U -l jb_bypass.js -f "com.mobilehackinglab.No-Escape"
-    ```
-    Ya tienes la flag!
-
+1. ```
+   frida -U -l jb_bypass.js -f "com.mobilehackinglab.No-Escape"
+   ```
+   Ya tienes la flag!
 
 🎯 Conclusión
 Hemos realizado un análisis completo utilizando **Ghidra** para comprender la estructura interna de la aplicación iOS, identificando mecanismos de seguridad y puntos de análisis críticos.
