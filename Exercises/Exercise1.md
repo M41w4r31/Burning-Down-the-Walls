@@ -155,6 +155,4 @@ Hemos aprendido a **bypassear cada método individualmente** y luego a **combina
 ## 🚀 Siguientes Pasos
 
 - Experimenta con más verificaciones de root en otras aplicaciones.
-- Explora cómo Frida puede modificar otros aspectos de una app.
-¡Felicidades! 🎉 Ahora tienes una herramienta poderosa para evitar la detección de root en Android.
 
