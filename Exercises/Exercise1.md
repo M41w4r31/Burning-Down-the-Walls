@@ -51,7 +51,7 @@ Java.perform(function() {
 ### ✅ Ejecutar con Frida:
 
 ```bash
-frida -U -n com.m41w4r3.burningdownthewalls -l bypass_superuserapp.js
+frida -U -f com.m41w4r3.burningdownthewalls -l bypass_superuserapp.js
 ```
 
 ---
@@ -71,7 +71,7 @@ Java.perform(function() {
 ### ✅ Ejecutar con Frida:
 
 ```bash
-frida -U -n com.m41w4r3.burningdownthewalls -l bypass_subinary.js
+frida -U -f com.m41w4r3.burningdownthewalls -l bypass_subinary.js
 ```
 
 ---
@@ -91,7 +91,7 @@ Java.perform(function() {
 ### ✅ Ejecutar con Frida:
 
 ```bash
-frida -U -n com.m41w4r3.burningdownthewalls -l bypass_rootbinaries.js
+frida -U -f com.m41w4r3.burningdownthewalls -l bypass_rootbinaries.js
 ```
 
 ---
@@ -122,7 +122,7 @@ Java.perform(function() {
 ### ✅ Ejecutar con Frida:
 
 ```bash
-frida -U -n com.m41w4r3.burningdownthewalls -l bypass_root.js
+frida -U -f com.m41w4r3.burningdownthewalls -l bypass_root.js
 ```
 
 ---
