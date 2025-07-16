@@ -54,7 +54,7 @@ Aprender a evadir la detección de root en una aplicación que usa **RootBeer** 
 
 3. **Ejecutamos el script con Frida:**
    ```sh
-   frida -U -f com.example.app -l bypass_rootbeer_single.js
+   frida -U -f com.scottyab.rootbeer.sample -l bypass_rootbeer_single.js
    ```
 
 ---
